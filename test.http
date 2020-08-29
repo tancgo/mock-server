@@ -1,0 +1,15 @@
+DELETE http://localhost:3000/v1/dbio/kpiManager/kpi:Abb71FEF-1E9E-fcfb-BBb9-3db7DF4EFcc9 HTTP/1.1
+content-type: application/json
+###
+GET http://localhost:3000/v1/dbio/kpiManager/kpi HTTP/1.1
+###
+GET http://10.4.33.113:3000/v1/dbio/kpiManager/service HTTP/1.1
+
+###
+POST http://localhost:3000/v1/dbio/kpiManager/kpi?id=Abb71FEF-1E9E-fcfb-BBb9-3db7DF4EFcc9 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "sample",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
