@@ -17,17 +17,20 @@ for (let i = 0; i < 150; i++) {
 }
 
 /* GET users listing. */
-router.get("/v1/dbio/kpiManager/kpi", function (req, res, next) {
+router.get("/api/v1/tags", function (req, res, next) {
   const { page = 1, size = 10, kpiKey } = req.query;
 
-  const data = dataList.slice((page - 1) * size, page * size);
+  const tags = {
+    code: 1212,
+    msg: "",
+    data: [
+      { id: 1, name: "sports", name_chs: "体育" },
+      { id: 2, name: "history", name_chs: "历史" },
+      { id: 3, name: "military", name_chs: " 军事" },
+    ],
+  };
 
-  res.json({
-    data,
-    count: dataList.length,
-    all: dataList.length,
-    success: 1,
-  });
+  res.json(tags);
 });
 
 router.delete("/v1/dbio/kpiManager/kpi:id", function (req, res, next) {

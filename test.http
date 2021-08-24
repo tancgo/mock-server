@@ -1,7 +1,11 @@
 DELETE http://localhost:3000/v1/dbio/kpiManager/kpi:Abb71FEF-1E9E-fcfb-BBb9-3db7DF4EFcc9 HTTP/1.1
 content-type: application/json
 ###
-GET http://localhost:3000/v1/dbio/kpiManager/kpi HTTP/1.1
+GET http://localhost:3000/api/v1/tags HTTP/1.1
+
+###
+GET http://10.180.1.118:4000/v1/assets/picture HTTP/1.1
+
 ###
 GET http://10.4.33.113:3000/v1/dbio/kpiManager/service HTTP/1.1
 
